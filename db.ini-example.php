@@ -9,8 +9,8 @@
 
 [Database]
 host = localhost
-username =
-password =
-database =
+username = exampleUsername
+password = examplePassword
+database = exampleDatabase
 
 charset = utf8
