@@ -1,0 +1,145 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "hash": "a55de8dc151d49c04e5da827d3e9e61c",
+    "packages": [
+        {
+            "name": "dandersson/FRTemplate",
+            "version": "dev-master",
+            "source": {
+                "type": "hg",
+                "url": "/home/daniel/lib/FRTemplate",
+                "reference": "b8a281941e02"
+            },
+            "require": {
+                "google/recaptcha": "~1.1",
+                "php": ">=5.5.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "FRTemplate\\": "src/"
+                }
+            },
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Daniel Andersson",
+                    "homepage": "http://510x.se/"
+                }
+            ],
+            "description": "Small web-site framework.",
+            "homepage": "https://github.com/dandersson/FRTemplate",
+            "support": {
+                "source": "https://github.com/dandersson/FRTemplate"
+            },
+            "time": "2015-03-24 11:39:08"
+        },
+        {
+            "name": "golonka/bbcodeparser",
+            "version": "v1.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/golonka/BBCodeParser.git",
+                "reference": "fdf206820986d0d3e3be6939a6a98ed482517659"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/golonka/BBCodeParser/zipball/fdf206820986d0d3e3be6939a6a98ed482517659",
+                "reference": "fdf206820986d0d3e3be6939a6a98ed482517659",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "3.7.21"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Golonka\\BBCode": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Joseph Landberg",
+                    "email": "joseph.landberg@gt5.se",
+                    "homepage": "http://gt5.se"
+                }
+            ],
+            "description": "Parse your BBCode easy with this library.",
+            "homepage": "http://github.com/golonka/bbcodeparser",
+            "keywords": [
+                "bbcode",
+                "laravel",
+                "parser"
+            ],
+            "time": "2014-06-30 21:50:39"
+        },
+        {
+            "name": "google/recaptcha",
+            "version": "1.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/google/recaptcha.git",
+                "reference": "090585935d95ebdf2d16dd071b10c9179a94da47"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/google/recaptcha/zipball/090585935d95ebdf2d16dd071b10c9179a94da47",
+                "reference": "090585935d95ebdf2d16dd071b10c9179a94da47",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.5.*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "ReCaptcha\\": "src/ReCaptcha"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "Client library for reCAPTCHA, a free service that protect websites from spam and abuse.",
+            "homepage": "http://www.google.com/recaptcha/",
+            "keywords": [
+                "Abuse",
+                "captcha",
+                "recaptcha",
+                "spam"
+            ],
+            "time": "2015-03-16 13:45:08"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "dandersson/frtemplate": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}

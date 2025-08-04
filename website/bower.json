@@ -1,0 +1,16 @@
+{
+  "name": "fr-rotary.com",
+  "authors": [
+    "Daniel Andersson <sskraep@gmail.com>"
+  ],
+  "description": "Website for FR Rotary",
+  "license": "Apache-2.0",
+  "homepage": "http://fr-rotary.com/",
+  "private": true,
+  "dependencies": {
+    "font-awesome": "~4.3.0",
+    "Hyphenator": "git://github.com/mnater/Hyphenator#~4.3.0",
+    "ie9-js": "*",
+    "css3-mediaqueries-js": "~1.0.0"
+  }
+}

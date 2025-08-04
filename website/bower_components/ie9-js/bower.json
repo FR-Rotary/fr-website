@@ -1,0 +1,22 @@
+{
+  "name": "ie9-js",
+  "version": "2.1.0-beta4",
+  "authors": [
+    "Dean Edwards <dean.edwards@gmail.com>",
+    "Dirk Sidney Jansen <sid@sidisinsane.com>"
+  ],
+  "main": "lib/IE9.js",
+  "keywords": [
+    "ie",
+    "polyfill"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/sidisinsane/ie7-js",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

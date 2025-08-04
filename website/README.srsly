@@ -1,0 +1,100 @@
+De filer och kataloger som används för nuvarande hemsidan är de filer i roten
+med ändelse `.php`, och katalogerna
+
+    bilder
+    css
+    dokument
+    include
+    templates
+
+------------------------------------------------------------------------------
+
+Jag installerade denna version av hemsidan 2009–11–01, och låter den gamla vara
+kvar av historiska skäl samt att i djungeln av kataloger och filer så finns det
+säkert något användbart.
+
+/Daniel, ordf FR Rotary, 2009–11–01
+
+------------------------------------------------------------------------------
+
+Jag har rensat ut mycket (allt?) gammalt och icke använt ur `~/public`. Vill
+man ha tag i en gammal version av hemsidan så titta i `~/backup`.
+
+Allt förutom husfestbilderna sköts nu genom Mercurial. Jag uppdaterar vanligen
+sidan på min hemdator och kör sedan
+
+    hg pull http://510x.se/hg/www/fr-rotary.com
+    hg update
+
+på FR-servern för att uppdatera sidan.
+
+Nyheterna i MySQL-databasen följer inte med per default, men jag synkar MySQL
+med andra skript. Nyheter administrerar jag vanligen med
+<http://fr-rotary.com/phpmyadmin>.
+
+/Daniel, ordf FR Rotary, 2011–06–26
+
+------------------------------------------------------------------------------
+
+En kommentar: jag använder i praktiken en hook som automatiskt uppdaterar den
+officella varianten av hemsidan när jag commit:ar på min "utvecklingsserver",
+dvs min hemdator.
+
+Har lagt till
+
+    [hooks]
+    commit = ssh fr-http hg --cwd public pull -u
+
+i `/var/www/fr-rotary.com/.hg/hgrc` på min lokala dator, och har satt upp
+SSH-nycklar för inloggning till `fr-http` som är ett alias inlagt i
+`~/.ssh/config` för FR-servern med `fr-http` som användare.
+
+/Daniel, ordf FR Rotary, 2011–12–16
+
+------------------------------------------------------------------------------
+
+Husfestbilderna sköts genom att jag genererar thumbnails och en indexfil med
+ett hemmasnickrat script på min egen dator, SCP:ar över detta inkl
+fullstorleksbilder till rätt katalog på FR-servern och manuellt lägger till en
+länk från husfestssidan.
+
+/Daniel, ordf FR Rotary, 2011–12–16
+
+------------------------------------------------------------------------------
+
+Antalet nyheter som visas är nu en inställning i `updates_settings` tabellen i
+MySQL-databasen.
+
+/Daniel, gammal räv FR Rotary, 2013–04–12
+
+------------------------------------------------------------------------------
+
+Har skrivit om egentligen hela backend för sidan. Har samlat logiken i klasser
+i paketet FRTemplate som laddas via en autoloader. Redan tidigare hade jag
+strömlinjeformat FR:s och pubens hemsida på backendsidan, men tanken är att det
+ska gälla än mer nu, och att det ska bli lättare att dela funktionalitet
+sidorna emellan, och kanske även gällande interna sidor i förlängningen. Det
+bör bli lättare att få en övergripande koll på hur sidan fungerar nu, om man är
+bekväm med klasser, vill säga.
+
+FRTemplate ligger under separat versionshantering då det ska vara identiskt för
+både pubens och FR:s hemsidor.
+
+/Daniel, gammal räv FR Rotary, 2014-04-12 (av en slump exakt ett år senare)
+
+------------------------------------------------------------------------------
+
+FRTemplate laddas nu genom Composer [0], vilket gör saker bra mycket smidigare
+gällande uppdateringar.
+
+/Daniel, gammal räv FR Rotary, 2015-03-24 (av en slump nästan ett år senare)
+
+[0]: https://getcomposer.org/
+
+------------------------------------------------------------------------------
+
+Jag har dockeriserat tjänsten och rensat en massa gammalt från den tidigare
+användaren som körde denna webtjänst. Detta gör det enkalre att flytta 
+tjänsten eller börja på helt ny kula i det fall att hårddisken skulle dö.
+
+/Kryddan, IT-ansvarig 2025-08-04
